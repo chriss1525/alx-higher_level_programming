@@ -13,9 +13,9 @@ int check_cycle(listint_t *list)
 	{
 		if (new->next == list)
 			return (0);
+		new = new->next;
 		if (new->next == new)
 			return (0);
-		new = new->next;
 	}
 	return (1);
 }
