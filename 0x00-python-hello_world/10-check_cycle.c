@@ -6,16 +6,29 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *new;
+	listint_t *new, *temp;
+	int i, j;
 
-	new = list->next;
-	while (new->next)
+	temp = list;
+	i = 0;
+
+	while(temp)
 	{
-		if (new->next == list)
-			return (0);
-		new = new->next;
-		/*if (new->next == new)
-			return (0);*/
+		if (i != 0)
+		{
+			new = list;
+			j = 0;
+			while (j < i)
+			{
+				if (new == temp)
+					return (1);
+				j++;
+				new = new->next;
+			}
+		}
+		temp = temp->next;
+		i++;
 	}
-	return (1);
+
+	return (0);
 }
