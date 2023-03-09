@@ -8,7 +8,7 @@ if __name__ == '__main__':
     elif argc == 2:
         print("{} argument:".format(argc - 1))
         print("1: {}".format(argv))
-    elif argc > 2:
+    else:
         print("{} arguments:".format(argc - 1))
         while (index < argc):
             print("{}: {}".format(index, argv[index]))
