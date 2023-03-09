@@ -5,4 +5,4 @@ if __name__ == '__main__':
     t_args = 0
     for index in range(argc - 1):
         t_args += int(argv[index + 1])
-        print("{}".format(t_args))
+    print("{}".format(t_args))
