@@ -14,7 +14,7 @@ int is_palindrome(listint_t **head)
     int count = 0;
     int i;
     listint_t *curr = *head;
-    int arr[100]; 
+    int *arr; 
     while (curr != NULL)
     {
         arr[count++] = curr->n;
