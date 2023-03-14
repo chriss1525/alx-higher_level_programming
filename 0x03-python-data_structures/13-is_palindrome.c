@@ -8,36 +8,25 @@
  *
  * Return: 0 if it is not a palindrome, 1 if it is
  */
+
 int is_palindrome(listint_t **head)
 {
-    int *list, len, i;
-    listint_t *current;
-
-    list = malloc(sizeof(int));
-    if (list == NULL)
-        exit(EXIT_FAILURE);
-
-    current = *head;
-    len = 1;
-
-    /* traverse the linked list */
-    while (current)
+    int count = 0;
+    int i;
+    listint_t *curr = *head;
+    int arr[100]; 
+    while (curr != NULL)
     {
-        list[len++ - 1] = current->n;
-        list = realloc(list, sizeof(int) * len);
-        current = current->next;
+        arr[count++] = curr->n;
+        curr = curr->next;
     }
 
-    len -= 1;
-    i = 0;
-
-    /* check for palindrome */
-    while (i <= len / 2)
+    for (i = 0; i < count / 2; i++)
     {
-        if (list[i] != list[len - i - 1])
+        if (arr[i] != arr[count - 1 - i])
+        {
             return (0);
-
-        i++;
+        }
     }
 
     return (1);
