@@ -8,7 +8,8 @@ if size is less than 0 raise value error
 
 class Square:
     """
-    takes in private instance size, private instance positions and public instance area
+    takes in private instance size, private instance positions 
+    and public instance area
     """
 
     def __init__(self, size=0, position=(0, 0)):
