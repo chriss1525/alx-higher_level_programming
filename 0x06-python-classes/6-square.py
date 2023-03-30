@@ -8,7 +8,7 @@ if size is less than 0 raise value error
 
 class Square:
     """
-    takes in private instance size, private instance positions 
+    takes in private instance size, private instance positions
     and public instance area
     """
 
