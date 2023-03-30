@@ -8,7 +8,7 @@ if size is less than 0 raise value error
 
 class Square:
     """
-    takes in private instance size and public instance area
+    takes in private instance size, private instance positions and public instance area
     """
 
     def __init__(self, size=0, position=(0, 0)):
@@ -19,7 +19,7 @@ class Square:
 
     @property
     def size(self):
-        """get access tp [rivate instance size
+        """get access to private instance size
         return square size"""
         return self.__size
 
@@ -39,6 +39,7 @@ class Square:
 
     @position.setter
     def position(self, value):
+        """check if position is a tuple of two positive integers"""
         if (not isinstance(value, tuple) or
                 len(value) != 2 or
                 not all(isinstance(num, int) for num in value) or
