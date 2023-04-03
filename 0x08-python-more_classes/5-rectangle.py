@@ -90,3 +90,7 @@ class Rectangle:
         """Returns a string representation of the Rectangle
         that can be used to recreate the object"""
         return "Rectangle({}, {})".format(self.__height, self.__width)
+
+    def __del__(self):
+        """prints by rectangel when an instance is deleted"""
+        print("Bye rectangle...")
