@@ -7,10 +7,13 @@ class rectangle has private instance width and private instance height
 class Rectangle:
     """
     takes in private instances width and height
+    Attributes:
+    number of instances - counts available number of instances at a time
+    print symbol - symbol for printing strings (can be anything)
     """
 
     number_of_instances = 0
-    print_symbol = '#'
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """define object width and height"""
@@ -70,25 +73,12 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return ''
 
-        str = ''
+        string = ''
         for i in range(self.__height):
             for j in range(self.__width):
-                str += '#'
-            str += '\n'
-        return str[: -1]
-
-    def __str__(self):
-        """returns a srring representation of rectangle using #"""
-
-        if self.__height == 0 or self.__width == 0:
-            return ''
-
-        str = ''
-        for i in range(self.__height):
-            for j in range(self.__width):
-                str += '#'
-            str += '\n'
-        return str[: -1]
+                string += str(self.print_symbol)
+            string += '\n'
+        return string[: -1]
 
     def __repr__(self):
         """Returns a string representation of the Rectangle
