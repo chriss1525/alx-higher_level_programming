@@ -9,10 +9,13 @@ class Rectangle:
     takes in private instances width and height
     """
 
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """define object width and height"""
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -94,3 +97,4 @@ class Rectangle:
     def __del__(self):
         """prints by rectangle when an instance is deleted"""
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
