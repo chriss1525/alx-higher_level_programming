@@ -13,3 +13,7 @@ try:
     print(add_integer(None))
 except Exception as e:
     print(e)
+try:
+    print(add_integer(8, 'j'))
+except Exception as e:
+    print(e)

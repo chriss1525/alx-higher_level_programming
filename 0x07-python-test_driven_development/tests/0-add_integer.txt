@@ -1,5 +1,57 @@
-the function adds integers
-Test 1: function can identify integers.
-if a number is not an integer or a float, function should raise typeerror.
-Test 2: function successfully identifies float and typecasts it into integer
-Test 3: function returns correct sum of a and b
+This is the "0-add_integer.py" module
+=====================================
+
+it returns the sum of two integers
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Returns the sum of a and b
+
+>>> add_integer(3, 5)
+8
+
+When a negative number is passed
+==================================
+
+>>> add_integer(-2)
+96
+
+b has a default value of 98 that is passed when only one argument is given
+a is a negative number
+
+when a float is passed
+=======================
+
+>>> add_integer(3.14)
+101
+
+a is a float that is casted to an integer
+b has a default value of 98 that is passed when only one argument is given
+
+when either arguments are not integers or floats
+================================================
+
+>>> add_integer("str", 7)
+Traceback (most recent call last):
+       ...
+TypeError: a must be an integer
+
+>>> add_integer(7, "str")
+Traceback (most recent call last):
+       ...
+TypeError: b must be an integer
+
+>>> add_integer('c', 8)
+Traceback (most recent call last):
+       ...
+TypeError: a must be an integer
+
+>>> add_integer(8, 'j')
+Traceback (most recent call last):
+       ...
+TypeError: b must be an integer
+
+>>> add_integer(None, 2)
+Traceback (most recent call last):
+       ...
+TypeError: a must be an integer
