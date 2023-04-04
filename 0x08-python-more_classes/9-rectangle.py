@@ -32,7 +32,6 @@ class Rectangle:
         """ creates a rectacngle instance where hieght == width == size """
         return cls(size, size)
 
-
     def __init__(self, width=0, height=0):
         """define object width and height"""
         self.width = width
