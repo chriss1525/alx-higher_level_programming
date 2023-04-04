@@ -1,0 +1,5 @@
+the function adds integers
+Test 1: function can identify integers.
+if a number is not an integer or a float, function should raise typeerror.
+Test 2: function successfully identifies float and typecasts it into integer
+Test 3: function returns correct sum of a and b
