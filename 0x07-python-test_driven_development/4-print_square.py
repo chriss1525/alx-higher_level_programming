@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """this module defines print_square"""
+
+
 def print_square(size):
     """prints a square of side size using the # symbol"""
     if not isinstance(size, int):
