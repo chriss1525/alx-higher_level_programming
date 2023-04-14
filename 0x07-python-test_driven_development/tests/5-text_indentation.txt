@@ -8,6 +8,12 @@ I want to jump:
 <BLANKLINE>
 Just do it
 
+one string
+===========
+>>> text_indentation("""Chriss?""")
+Chriss?
+<BLANKLINE>
+
 whether text is string
 ======================
 text_indentation(80)
@@ -15,3 +21,13 @@ Traceback (most recent call last):
 	...
 TypeError: text must be a string
 
+no space is printed at the start of a new line or at the end
+=============================================================
+>>> text_indentation("""  Just do it?""")
+Just do it?
+<BLANKLINE>
+
+>>> text_indentation("""Hi.  """)
+Hi.
+<BLANKLINE>
+<BLANKLINE>
