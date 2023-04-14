@@ -1,0 +1,34 @@
+Import function 
+>>> print_square = __import__("4-print_square").print_square
+
+function prints a print_square
+
+>>> print_square(4)
+####
+####
+####
+####
+
+when argument is not an integer
+===============================
+>>> print_square('j')
+Traceback (most recent call last):
+	...
+TypeError: size must be an integer
+
+>>> print_square(8.30)
+Traceback (most recent call last):
+	...
+TypeError: size must be an integer
+
+>>> print_square(0.45)
+Traceback (most recent call last):
+	...
+TypeError: size must be an integer
+
+when argument is less than zero
+================================
+>>> print_square(-3)
+Traceback (most recent call last):
+	...
+ValueError: size must be >= 0
