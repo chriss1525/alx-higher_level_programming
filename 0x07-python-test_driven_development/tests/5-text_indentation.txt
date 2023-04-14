@@ -1,0 +1,17 @@
+Import function 
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+prints a text replacing ',', '?' and ':' with two new lines
+
+>>> text_indentation("""I want to jump: Just do it""")
+I want to jump
+<BLANKLINE>
+Just do it
+
+whether text is string
+======================
+text_indentation(80)
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
+
