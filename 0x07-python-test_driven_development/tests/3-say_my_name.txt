@@ -1,0 +1,25 @@
+This is the "3-matrix_divided.py" module
+=========================================
+
+it prints a person's name
+
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+ it prints a person's name
+    >>> say_my_name("Chriss", "Tin")
+    My name is Chriss Tin
+
+    when there's just one argument
+    >>> say_my_name("Tin")
+    My name is Tin
+
+    when argument is not a string
+    >>> say_my_name(2, "Tin")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name("Chriss", 0.3)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string

@@ -1,12 +1,15 @@
 #!/usr/bin/python3
+"""this module has the function add_integer"""
+
+
 def add_integer(a, b=98):
     """
     Returns the sum of a and b
 
     >>>add_integer(3, 5)
     8
-    >>>add_integer(1)
-    99
+
+    Raises type error if arguments are not int or float type
     """
     if type(a) == float:
         """cast floats to integers"""
