@@ -1,3 +1,3 @@
-#python-hello_world
+# python-hello_world
 
 Practical projects on introductory concepts in python programming
