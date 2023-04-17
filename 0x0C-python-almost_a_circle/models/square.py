@@ -44,7 +44,7 @@ def update(self, *args,  **kwargs):
                 else:
                     self.id = j
             elif i == "size":
-                self.width = j
+                self.size = j
             elif i == "x":
                 self.x = j
             elif i == "y":
