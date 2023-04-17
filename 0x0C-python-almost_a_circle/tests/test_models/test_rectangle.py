@@ -41,3 +41,12 @@ class TestRectangle(unittest.TestCase):
     def test_area_calculation(self):
         r = Rectangle(5, 10)
         self.assertEqual(r.area(), 50)
+
+
+    def test_attribute(self):  
+        b = Rectangle()
+        with self.assertRaises(AttributeError):
+            print(b.nb_objects)
+
+    def test_type(self):
+        self.assertEqual(type(Rectangle), type)
