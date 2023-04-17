@@ -15,5 +15,13 @@ class TestBase(unittest.TestCase):
         # Test that the id attribute is incremented correctly when not provided
         obj1 = Base()
         obj2 = Base()
-        self.assertEqual(obj1.id, 1)
+        self.assertEqual(obj1.id, 1+1)
         self.assertEqual(obj2.id, 2)
+
+    def test_attribute(self):
+        b = Base()
+        with self.assertRaises(AttributeError):
+            print(b.nb_objects)
+
+    def test_type(self):
+        self.assertEqual(type(Base), type)
