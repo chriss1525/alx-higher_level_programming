@@ -38,4 +38,8 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             r = Rectangle(5, 10, 0, "one")
 
+    def test_area_calculation(self):
+        r = Rectangle(5, 10)
+        self.assertEqual(r.area(), 50)
+
     unittest.main()
