@@ -71,7 +71,8 @@ class Rectangle(Base):
 
     def display(self):
         """
-		print rectangle instance using #"""
+        print rectangle instance using #
+        """
         if self.width == 0 or self.height == 0:
             print("")
             return
