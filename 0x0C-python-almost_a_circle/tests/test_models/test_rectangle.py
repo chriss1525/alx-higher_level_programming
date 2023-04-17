@@ -41,5 +41,3 @@ class TestRectangle(unittest.TestCase):
     def test_area_calculation(self):
         r = Rectangle(5, 10)
         self.assertEqual(r.area(), 50)
-
-    unittest.main()

@@ -17,5 +17,3 @@ class TestBase(unittest.TestCase):
         obj2 = Base()
         self.assertEqual(obj1.id, 1)
         self.assertEqual(obj2.id, 2)
-
-    unittest.main()
