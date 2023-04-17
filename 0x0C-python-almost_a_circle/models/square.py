@@ -31,8 +31,7 @@ def update(self, *args,  **kwargs):
                 self.__init__(self.size, self.x, self.y)
             else:
                 self.id = args[0]
-                self.width = args[1]
-                self.height = args[2]
+                self.size = args[2]
                 self.x = args[3]
                 self.y = args[4]
         except Exception:
@@ -44,10 +43,8 @@ def update(self, *args,  **kwargs):
                     self.__init__(self.size, self.x, self.y)
                 else:
                     self.id = j
-            elif i == "width":
+            elif i == "size":
                 self.width = j
-            elif i == "height":
-                self.height = j
             elif i == "x":
                 self.x = j
             elif i == "y":
