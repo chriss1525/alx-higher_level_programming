@@ -42,6 +42,37 @@ class TestRectangle(unittest.TestCase):
         r = Rectangle(5, 10)
         self.assertEqual(r.area(), 50)
 
+    def test_create_rectangle_with_args(self):
+        r = Rectangle(10, 5)
+        self.assertEqual(r.id, 1)
+        self.assertEqual(r.width, 10)
+        self.assertEqual(r.height, 5)
+        self.assertEqual(r.x, 0)
+        self.assertEqual(r.y, 0)
+
+    def test_create_rectangle_with_kwargs(self):
+        r = Rectangle(id=2, width=7, height=2, x=1, y=1)
+        self.assertEqual(r.id, 2)
+        self.assertEqual(r.width, 7)
+        self.assertEqual(r.height, 2)
+        self.assertEqual(r.x, 1)
+        self.assertEqual(r.y, 1)
+
+    def test_display(self):
+        r = Rectangle(3, 2)
+        output = "\n".join(["###", "###", ""])
+        self.assertEqual(r.display(), print(output))
+
+    def test_to_dictionary(self):
+        r = Rectangle(10, 5, 2, 1)
+        self.assertEqual(r.to_dictionary(), {
+                         'id': 1, 'width': 10, 'height': 5, 'x': 2, 'y': 1})
+
+    def test_update_kwargs(self):
+        r = Rectangle(10, 10)
+        r.update(height=1)
+        self.assertEqual(str(r), "[Rectangle] (1) 0/0 - 10/1")
+
     def test_type(self):
         self.assertEqual(type(Rectangle), type)
 
