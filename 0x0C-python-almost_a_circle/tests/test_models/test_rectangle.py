@@ -2,8 +2,12 @@
 """This test module defines tests for rectangle.py"""
 
 from models.rectangle import Rectangle
+from models.base import Base
 import unittest
 
+
+def setUp(self):
+    Base._Base__nb_objects = 0
 
 class TestRectangle(unittest.TestCase):
     def test_rectangle_creation(self):
@@ -43,6 +47,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r.area(), 50)
 
     def test_create_rectangle_with_args(self):
+        Base._Base__nb_objects = 0
         r = Rectangle(10, 5)
         self.assertEqual(r.id, 1)
         self.assertEqual(r.width, 10)
@@ -51,6 +56,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r.y, 0)
 
     def test_create_rectangle_with_kwargs(self):
+        Base._Base__nb_objects = 0
         r = Rectangle(id=2, width=7, height=2, x=1, y=1)
         self.assertEqual(r.id, 2)
         self.assertEqual(r.width, 7)
@@ -64,11 +70,13 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r.display(), print(output))
 
     def test_to_dictionary(self):
+        Base._Base__nb_objects = 0
         r = Rectangle(10, 5, 2, 1)
         self.assertEqual(r.to_dictionary(), {
                          'id': 1, 'width': 10, 'height': 5, 'x': 2, 'y': 1})
 
     def test_update_kwargs(self):
+        Base._Base__nb_objects = 0
         r = Rectangle(10, 10)
         r.update(height=1)
         self.assertEqual(str(r), "[Rectangle] (1) 0/0 - 10/1")
