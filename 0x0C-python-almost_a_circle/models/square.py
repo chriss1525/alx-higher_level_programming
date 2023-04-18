@@ -22,40 +22,38 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
-
-def update(self, *args,  **kwargs):
-    """assign argument to every attribute"""
-    if args and len(args) != 0:
-        try:
-            if args[0] is None:
-                self.__init__(self.size, self.x, self.y)
-            else:
-                self.id = args[0]
-                self.size = args[2]
-                self.x = args[3]
-                self.y = args[4]
-        except Exception:
-            pass
-    elif kwargs and len(kwargs) != 0:
-        for i, j in kwargs.items():
-            if i == "id":
-                if j is None:
+    def update(self, *args, **kwargs):
+        """assign argument to every attribute"""
+        if args and len(args) != 0:
+            try:
+                if args[0] is None:
                     self.__init__(self.size, self.x, self.y)
                 else:
-                    self.id = j
-            elif i == "size":
-                self.size = j
-            elif i == "x":
-                self.x = j
-            elif i == "y":
-                self.y = j
+                    self.id = args[0]
+                    self.size = args[1]
+                    self.x = args[2]
+                    self.y = args[3]
+            except Exception:
+                pass
+        elif kwargs and len(kwargs) != 0:
+            for i, j in kwargs.items():
+                if i == "id":
+                    if j is None:
+                        self.__init__(self.size, self.x, self.y)
+                    else:
+                        self.id = j
+                elif i == "size":
+                    self.size = j
+                elif i == "x":
+                    self.x = j
+                elif i == "y":
+                    self.y = j
 
-
-def to_dictionary(self):
-    """Return the dictionary representation of a Rectangle."""
-    return {
-        "id": self.id,
-        "size": self.size,
-        "x": self.x,
-        "y": self.y
-    }
+    def to_dictionary(self):
+        """Return the dictionary representation of a Rectangle."""
+        return {
+            "id": self.id,
+            "size": self.size,
+            "x": self.x,
+            "y": self.y
+        }

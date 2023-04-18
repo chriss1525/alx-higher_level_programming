@@ -9,7 +9,9 @@ import unittest
 class TestSquare(unittest.TestCase):
     """tests"""
 
+
     def test_init(self):
+        Base._Base__nb_objects = 0
         s = Square(5)
         self.assertEqual(s.id, 1)
         self.assertEqual(s.size, 5)
