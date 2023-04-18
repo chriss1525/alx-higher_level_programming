@@ -1,25 +1,12 @@
 #!/usr/bin/python3
-""" Check """
-from models.square import Square
+""" 15-main """
+from models.rectangle import Rectangle
 
-s = Square(2)
-if str(s) != "[Square] (1) 0/0 - 2":
-    print("__str__ is not correctly overloaded: {}".format(s))
-    exit(1)
+if __name__ == "__main__":
 
-s = Square(2, 3)
-if str(s) != "[Square] (2) 3/0 - 2":
-    print("__str__ is not correctly overloaded: {}".format(s))
-    exit(1)
+    r1 = Rectangle(10, 7, 2, 8)
+    r2 = Rectangle(2, 4)
+    Rectangle.save_to_file([r1, r2])
 
-s = Square(2, 3, 4)
-if str(s) != "[Square] (3) 3/4 - 2":
-    print("__str__ is not correctly overloaded: {}".format(s))
-    exit(1)
-
-s = Square(2, 3, 4, 89)
-if str(s) != "[Square] (89) 3/4 - 2":
-    print("__str__ is not correctly overloaded: {}".format(s))
-    exit(1)
-
-print("OK", end="")
+    with open("Rectangle.json", "r") as file:
+        print(file.read())

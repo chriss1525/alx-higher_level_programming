@@ -2,6 +2,7 @@
 """this module defines a class square
 that inherits from Rectangle"""
 
+import json
 from models.rectangle import Rectangle
 
 
