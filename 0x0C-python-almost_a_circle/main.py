@@ -1,17 +1,25 @@
 #!/usr/bin/python3
-""" 13-main """
+""" Check """
 from models.square import Square
 
-if __name__ == "__main__":
+s = Square(2)
+if str(s) != "[Square] (1) 0/0 - 2":
+    print("__str__ is not correctly overloaded: {}".format(s))
+    exit(1)
 
-    s1 = Square(10, 2, 1)
-    print(s1)
-    s1_dictionary = s1.to_dictionary()
-    print(s1_dictionary)
-    print(type(s1_dictionary))
+s = Square(2, 3)
+if str(s) != "[Square] (2) 3/0 - 2":
+    print("__str__ is not correctly overloaded: {}".format(s))
+    exit(1)
 
-    s2 = Square(1, 1)
-    print(s2)
-    s2.update(**s1_dictionary)
-    print(s2)
-    print(s1 == s2)
+s = Square(2, 3, 4)
+if str(s) != "[Square] (3) 3/4 - 2":
+    print("__str__ is not correctly overloaded: {}".format(s))
+    exit(1)
+
+s = Square(2, 3, 4, 89)
+if str(s) != "[Square] (89) 3/4 - 2":
+    print("__str__ is not correctly overloaded: {}".format(s))
+    exit(1)
+
+print("OK", end="")
