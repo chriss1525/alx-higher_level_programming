@@ -1,3 +1,4 @@
 -- print all rows from a table
-SELECT *
-FROM first_table;
+SELECT `score`, `name`
+FROM first_table
+ORDER BY `score` DESC;
