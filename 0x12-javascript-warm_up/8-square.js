@@ -10,7 +10,7 @@ if (args[2]) {
     for (i = 0; i < number; i++) {
       let square = '';
       for (j = 0; j < number; j++) {
-        square += 'x';
+        square += 'X';
       }
       console.log(square);
     }
