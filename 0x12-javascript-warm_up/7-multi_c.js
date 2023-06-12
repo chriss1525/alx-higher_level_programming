@@ -12,6 +12,4 @@ if (args[2]) {
   } else {
     console.log('Missing number of occurrences');
   }
-} else {
-  console.log('Missing number of occurrences');
 }
