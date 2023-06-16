@@ -1,12 +1,13 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 """ select states from database """
-import MySQLdb
+
 import sys
+import MySQLdb
 
 username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
 
-connection = MySQLdb.connect(host="localhost" user=username,password=password, db=database, port=3306)
+connection = MySQLdb.connect(host="localhost", user=username,password=password, db=database, port=3306)
 
 cursor = connection.cursor()
 
