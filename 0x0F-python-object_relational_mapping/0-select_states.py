@@ -5,19 +5,23 @@
 import sys
 import MySQLdb
 
-username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
+if __name__ == "__main__":
 
-connection = MySQLdb.connect(host="localhost", user=username,password=password, db=database, port=3306)
+    username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
+    connection = MySQLdb.connect(host="localhost",
+                                 user=username,
+                                 password=password,
+                                 db=database,
+                                 port=3306)
 
-cursor = connection.cursor()
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
 
-cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    rows = cursor.fetchall()
 
-rows = cursor.fetchall()
+    for row in rows:
+        print(row)
 
-for row in rows:
-    print(row)
+    cursor.close()
 
-cursor.close()
-
-connection.close()
+    connection.close()
