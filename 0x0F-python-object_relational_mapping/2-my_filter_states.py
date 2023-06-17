@@ -18,10 +18,14 @@ if __name__ == "__main__":
     # prepare a cursor object using cursor() method
     cursor = connection.cursor()
 
-    # execute SQL query using execute() method.
-    cursor.execute(
-        "SELECT * FROM states WHERE name=%s ORDER BY id ASC",
-        (state_searched,))
+    # execute SQL query using format method
+
+    cursor.execute("""SELECT *
+                   FROM states
+                   WHERE name
+                   LIKE '{}'
+                   ORDER BY id ASC"""
+                   .format(state_searched))
 
     # Fetch a single row using fetchone() method.
     rows = cursor.fetchall()
