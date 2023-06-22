@@ -15,10 +15,10 @@ if __name__ == "__main__":
                                  password=password,
                                  db=database)
     cursor = connection.cursor()
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    cursor.execute("SELECT * FROM states WHERE name REGEXP '^N' ORDER BY id ASC;")
 
     for row in cursor.fetchall():
-        print(row)
+                   print(row)
 
     cursor.close()
     connection.close()
