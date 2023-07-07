@@ -5,7 +5,8 @@
 
 import urllib.request
 
-if __name__ == "__main__": 
+if __name__ == "__main__":
+    """Fetches https://intranet.hbtn.io/status"""
     with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as response:
         body_response = response.read()
 
