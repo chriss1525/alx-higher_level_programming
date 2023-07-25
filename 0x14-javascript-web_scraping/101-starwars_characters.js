@@ -4,7 +4,7 @@ const url = 'https://swapi-api.hbtn.io/api/films/';
 const movieId = process.argv[2];
 const log = console.log;
 
-function printCharactersInOrder(characters, index) {
+function printCharactersInOrder (characters, index) {
   if (index >= characters.length) {
     return;
   }
@@ -31,4 +31,3 @@ request(url + movieId, function (error, response, body) {
     printCharactersInOrder(characters, 0);
   }
 });
-
